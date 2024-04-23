@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadya's Portofolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nadya's Portofolio</h1>
+    </header>
+
+    <section id="name-form">
+        <h2>Please Enter Your Name</h2>
+        <form id="name-form" onsubmit="submitName(event)">
+            <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    
+    <footer>
+        <p>&copy; 2024 Nadya's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function submitName(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            localStorage.setItem("userName", name);
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
